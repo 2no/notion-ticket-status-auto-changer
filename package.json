@@ -1,0 +1,33 @@
+{
+  "name": "notion-ticket-status-auto-changer",
+  "version": "1.0.0",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "biome check **/*.{js,ts,json}",
+    "format": "biome format **/*.{js,ts,json} --write",
+    "build": "npm run lint && node build.js && cp appsscript.json dist/",
+    "open": "clasp open",
+    "deploy": "npm run build && clasp push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/2no/notion-ticket-status-auto-changer.git"
+  },
+  "author": "2no",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2no/notion-ticket-status-auto-changer/issues"
+  },
+  "homepage": "https://github.com/2no/notion-ticket-status-auto-changer#readme",
+  "description": "",
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
+    "@types/google-apps-script": "^1.0.83",
+    "@types/node": "^20.13.0",
+    "esbuild": "^0.21.4",
+    "esbuild-gas-plugin": "^0.8.0",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  }
+}
