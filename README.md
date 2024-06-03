@@ -14,6 +14,7 @@
 npm ci
 npx clasp login
 npx clasp create --rootDir ./dist
+npm run deploy
 ```
 
 2.スクリプト プロパティの設定
@@ -27,9 +28,3 @@ Google Apps Script の `プロジェクトの設定` -> `スクリプト プロ�
 | NOTION_TICKET_STATUS_WILL_CHANGE_TO_VALUE | 変更後のステータス値            |
 | NOTION_TICKET_CREATED_TIME_PROPERTY       | 作成日時のプロパティ名           |
 | NOTION_TICKET_CREATED_TIME_THRESHOLD      | 変更対象とする作成日時の閾値（マイクロ秒） |
-
-3.デプロイ
-
-```shell
-npm run deploy
-```
