@@ -2,27 +2,23 @@
 
 チケットのステータスを自動で変更する Google Apps Script
 
-## セットアップ
+使用するには自前で Notion インテグレーションを用意してデータベースと紐付ける必要があります
+
+## Setup
 
 プロジェクトをクローンし、プロジェクトルートにて以下を実行
 
+1.[clasp](https://github.com/google/clasp) で Google Apps Script のプロジェクトを作成する
+
 ```shell
 npm ci
+npx clasp login
+npx clasp create --rootDir ./dist
 ```
 
-#### Clasp のインストール
+2.スクリプト プロパティの設定
 
-必要に応じて [clasp](https://github.com/google/clasp) をインストールしてください
-
-```shell
-npm i -g @google/clasp
-```
-
-## 設定
-
-### スクリプトプロパティ
-
-GAS の `プロジェクトの設定` -> `スクリプト プロパティ` より以下を設定してください
+Google Apps Script の `プロジェクトの設定` -> `スクリプト プロパティ` より以下を設定してください
 
 | プロパティ                                     | 値                     |
 |-------------------------------------------|-----------------------|
@@ -31,3 +27,9 @@ GAS の `プロジェクトの設定` -> `スクリプト プロパティ` よ�
 | NOTION_TICKET_STATUS_WILL_CHANGE_TO_VALUE | 変更後のステータス値            |
 | NOTION_TICKET_CREATED_TIME_PROPERTY       | 作成日時のプロパティ名           |
 | NOTION_TICKET_CREATED_TIME_THRESHOLD      | 変更対象とする作成日時の閾値（マイクロ秒） |
+
+3.デプロイ
+
+```shell
+npm run deploy
+```
