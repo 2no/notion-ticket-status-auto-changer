@@ -4,8 +4,8 @@
   "main": "dist/bundle.js",
   "scripts": {
     "clean": "rimraf dist",
-    "lint": "biome check **/*.{js,ts,json}",
-    "format": "biome format **/*.{js,ts,json} --write",
+    "lint": "biome check .",
+    "format": "biome format . --write",
     "build": "npm run lint && node build.js && cp appsscript.json dist/",
     "open": "clasp open",
     "deploy": "npm run build && clasp push"

@@ -8,7 +8,7 @@ esbuild
     outfile: 'dist/bundle.js',
     target: 'es2019',
     minify: true,
-    plugins: [GasPlugin]
+    plugins: [GasPlugin],
   })
   .catch((e) => {
     console.error(e);
