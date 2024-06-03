@@ -1,6 +1,12 @@
+# Notion Ticket Status Auto Changer
+
+---
+
+チケットのステータスを自動で変更する Google Apps Script
+
 ## セットアップ
 
-プロジェクトルートにて以下を実行
+プロジェクトをクローンし、プロジェクトルートにて以下を実行
 
 ```shell
 npm ci
