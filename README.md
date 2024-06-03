@@ -1,7 +1,5 @@
 # Notion Ticket Status Auto Changer
 
----
-
 チケットのステータスを自動で変更する Google Apps Script
 
 ## セットアップ
